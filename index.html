@@ -1,9 +1,52 @@
-<div class="wrapper">
-  <h1>coming soon<span class="dot">.</span></h1>
-  <p>Put some text here.</p>
-  <div class="icons">
-    <a href=""><i class="fa fa-twitter"></i></a>
-    <a href=""><i class="fa fa-youtube-play"></i></a>
-    <a href=""><i class="fa fa-paper-plane"></i></a>
-  </div>
- </div>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+  <head>
+    <title>Coming Soon</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!--  -->
+    <!-- <link rel="stylesheet" href="fonts/fonts.css" /> -->
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>HeadQuaters 2.O<span class="dot">.</span></h1>
+      <p>Coming Soon</p>
+      <div class="icons">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    const paragraphs = document.querySelectorAll(".icons p");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      // Remove active class from all paragraphs
+      paragraphs.forEach((p) => {
+        p.classList.remove("active");
+      });
+
+      // Add active class to the current paragraph
+      paragraphs[currentIndex].classList.add("active");
+
+      // Update currentIndex for the next iteration
+      currentIndex = (currentIndex + 1) % paragraphs.length;
+    }, 500); // 0.5 seconds
+  });
+</script>
